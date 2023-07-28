@@ -1,0 +1,11 @@
+config 'interface' 'wan'
+	option 'proto'	'static'
+	option 'ifname' 'wlan0'
+	option ipaddr "192.168.1.1"
+
+config zone
+	option name		lan
+	list   network		'wwan'
+	option input		REJECT
+	option test		REJECT
+
